@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}  {[title}} {% endblock %}
+{% block content %}
+  {% from "_macro.html" import render_field %}
+   <form method="POST">
+    <div>
+     {{ render_field(form.username) }}
+     {{ render_field(form.namespace) }}
+    </div>
+    <div>
+
+    </div>
+
+    <input type="submit" value="Crear usuario">
+
+   </form>
+
+{% endblock  %}
