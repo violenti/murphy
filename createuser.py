@@ -1,12 +1,10 @@
 import kubernetes.client
 from kubernetes import client, config
-
 from kubernetes.client.rest import ApiException
 from pprint import pprint
-from kubernetes import config
 
 def create(user):
-
+    #hay que cambiarlos para reutilizar desde varios script
     config.load_kube_config()
     client.configuration.debug = True
     v1 = client.CoreV1Api()
@@ -22,3 +20,6 @@ def create(user):
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CoreV1Api->create_namespaced_service_account: %s\n" % e)
+
+def rolecreate(user,rol):
+    pass

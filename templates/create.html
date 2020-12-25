@@ -4,11 +4,9 @@
   {% from "_macro.html" import render_field %}
    <form method="POST">
     <div>
-     {{ render_field(form.username) }}
+     {{ render_field(form.username)}}
      {{ render_field(form.namespace) }}
-    </div>
-    <div>
-
+     {{ render_field(form.rols) }}
     </div>
 
     <input type="submit" value="Crear usuario">
